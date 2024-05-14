@@ -163,10 +163,10 @@ public class HelloController {
     }
 }
 
-    @GetMapping("/article/{id}")
-    public void find(@PathVariable String id){
-
-    }
+//    @GetMapping("/article/{id}")
+//    public void find(@PathVariable String id){
+//
+//    }
 
 
 // /introduce로 요청했을때 자기소개가 작성되어있는 HTML을 반환하기

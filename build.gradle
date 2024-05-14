@@ -20,6 +20,19 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
+	//MariaDB 때문에 추가
+	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.4.1'
+
+//
+//	compileOnly('javax.servlet:javax.servlet-api:4.0.1')
+//
+//	testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+//	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+//
+//	implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '3.0.5'
 }
 
 tasks.named('test') {
