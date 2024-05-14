@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -51,6 +52,12 @@ public class HelloController {
 //        return info;
 //    }
 
+    @PostMapping(value = "/json")
+    public ResponseEntity<Info> postMethod(@RequestBody Info info) {
+        // 받은 요청 정보를 그대로 반환합니다.
+        return new ResponseEntity<>(info, HttpStatus.OK);
+    }
+
     //    @ResponseBody
 //    @PostMapping(value = "/json")
 //    public String postMethod(@RequestBody Info info ) {
@@ -97,10 +104,10 @@ public class HelloController {
 
     }
 
-    @PostMapping(value = "/json")
-    public Info search(@RequestBody Info info) {
-        return info;
-    }
+//    @PostMapping(value = "/json")
+//    public Info search(@RequestBody Info info) {
+//        return info;
+//    }
 
     public static class Info {
         private String age;
