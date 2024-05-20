@@ -5,6 +5,12 @@ public class UserVO {
     private String age;
     private String name;
 
+    public UserVO(int id, String age, String name) {
+        id = this.id;
+        age = this.age;
+        name = this.name;
+    }
+
     public int id() {
         return id;
     }
